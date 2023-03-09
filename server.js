@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -14,3 +14,4 @@ db.once('open', () => {
         console.log(`API server running on ${PORT}!`);
     });
 });
+
